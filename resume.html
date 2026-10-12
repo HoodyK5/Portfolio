@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Resume of Mohammed Thajul Akber, cybersecurity student targeting SOC Analyst and Penetration Tester roles.">
+<title>Resume - Mohammed Thajul Akber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a paper sheet on the themed page. Section labels sit in a left rail, content on the right. The sheet stays white so it prints the same as it looks. */
+:root {
+  --bg: #090e18;
+  --surface: #101827;
+  --line: #223149;
+  --fg: #e8edf6;
+  --muted: #93a1bb;
+  --accent: #ffb224;
+  --on-accent: #1a1100;
+  --paper: #ffffff;
+  --ink: #0c1424;
+  --ink-soft: #3d4a60;
+  --rule: #cfd6e2;
+  --brand: #9a5400;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #e9edf4; --surface: #ffffff; --line: #d3dae6; --fg: #0c1424; --muted: #56637b;
+    --accent: #a85d00; --on-accent: #ffffff; color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #e9edf4; --surface: #ffffff; --line: #d3dae6; --fg: #0c1424; --muted: #56637b;
+  --accent: #a85d00; --on-accent: #ffffff; color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 1rem; line-height: 1.55; padding-inline: 16px; -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.topbar { max-width: 860px; margin-inline: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; padding-block: 16px; }
+.topbar .spacer { margin-right: auto; }
+.tb {
+  font: inherit; font-size: 0.85rem; font-weight: 600; text-decoration: none; cursor: pointer;
+  background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px;
+}
+.tb:hover { border-color: var(--accent); }
+.tb.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.tb.mono { font-family: var(--font-mono); font-weight: 400; font-size: 0.78rem; }
+
+.sheet {
+  max-width: 860px; margin-inline: auto; margin-bottom: 40px;
+  background: var(--paper); color: var(--ink);
+  border-radius: 6px; padding: clamp(22px, 5vw, 48px);
+  box-shadow: 0 1px 0 var(--line), 0 18px 40px rgba(0, 0, 0, 0.18);
+  font-size: 0.92rem; line-height: 1.5;
+}
+.sheet a { color: var(--ink); text-decoration-color: var(--rule); text-underline-offset: 2px; }
+.head { display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px; border-bottom: 2px solid var(--ink); }
+.head h1 { margin: 0; font-family: var(--font-display); font-weight: 900; font-variation-settings: "wdth" 112; font-size: clamp(1.9rem, 6vw, 2.7rem); letter-spacing: -0.01em; line-height: 1.02; text-wrap: balance; }
+.head .role { font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.04em; color: var(--brand); }
+.head .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.85rem; color: var(--ink-soft); }
+
+.row { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 6px 24px; padding-block: 16px; border-bottom: 1px solid var(--rule); }
+.row:last-child { border-bottom: 0; }
+.label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand); padding-top: 3px; }
+.entry + .entry { margin-top: 16px; }
+.entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; }
+.entry-head h2 { margin: 0; font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; font-variation-settings: "wdth" 108; line-height: 1.25; }
+.entry-head .meta { font-family: var(--font-mono); font-size: 0.76rem; color: var(--ink-soft); }
+.sub { color: var(--ink-soft); font-size: 0.88rem; }
+.sheet ul { margin: 6px 0 0; padding-left: 1.1rem; }
+.sheet li { margin-bottom: 3px; }
+.sheet p { margin: 0; }
+.certs { list-style: none; padding: 0 !important; display: grid; gap: 8px; margin-top: 0 !important; }
+.certs li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; margin: 0; }
+.certs b { font-weight: 600; }
+.certs .d { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-soft); white-space: nowrap; }
+.certs .i { grid-column: 1 / -1; color: var(--ink-soft); font-size: 0.85rem; }
+.skills { list-style: none; padding: 0 !important; display: grid; gap: 4px; margin-top: 0 !important; }
+.skills li { margin: 0; }
+.skills b { font-weight: 600; }
+
+@media (max-width: 640px) {
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .certs .d { white-space: normal; }
+}
+@media print {
+  @page { size: A4; margin: 11mm 13mm; }
+  html, body { background: #fff !important; }
+  body { padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .topbar { display: none !important; }
+  .sheet { max-width: none; margin: 0; padding: 0; box-shadow: none; border-radius: 0; font-size: 9.6pt; line-height: 1.42; }
+  .row { padding-block: 9px; break-inside: avoid; }
+  .entry { break-inside: avoid; }
+  .head { padding-bottom: 12px; }
+  .head h1 { font-size: 24pt; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="tb" href="index.html">← Portfolio</a>
+  <span class="spacer"></span>
+  <a class="tb primary" href="resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+  <button class="tb mono" id="themeBtn" type="button" aria-label="Switch colour theme">theme</button>
+</div>
+
+<main class="sheet" id="resume">
+  <header class="head">
+    <h1>Mohammed Thajul Akber</h1>
+    <div class="role">SOC Analyst · Penetration Tester</div>
+    <div class="contact">
+      <span>Lakshadweep, India</span>
+      <a href="https://github.com/HoodyK5" target="_blank" rel="noopener">github.com/HoodyK5</a>
+      <a href="https://www.linkedin.com/in/thajulakber/" target="_blank" rel="noopener">linkedin.com/in/thajulakber</a>
+      <!-- EMAIL / PHONE: add them here, for example: <span>you@example.com</span> -->
+    </div>
+  </header>
+
+  <section class="row">
+    <div class="label">Summary</div>
+    <div>
+      <p>Cybersecurity student aiming for SOC Analyst and Penetration Tester roles. I build detection and malware-analysis tooling in my own lab: a Wazuh SIEM with file integrity monitoring and automated response, and a Python desktop tool that enriches files, hashes and URLs from four threat-intelligence sources. One-month ShadowFox internship and certificates in AI security, LLM security, networking and cloud attack paths.</p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="label">Experience</div>
+    <div>
+      <div class="entry">
+        <div class="entry-head"><h2>Cybersecurity Intern, ShadowFox</h2><span class="meta">1 month</span></div>
+        <div class="sub">Practical assessment in authorised lab environments. Each task submitted as a written report with objective, tools, methodology, evidence, findings, risk assessment and remediation.</div>
+        <ul>
+          <li>Port and service identification and web directory enumeration on an authorised test target, with HTTP response codes and risk assessment.</li>
+          <li>Wireshark analysis of login traffic to show whether credentials travel in plaintext or encrypted.</li>
+          <li>VeraCrypt container analysis (identifying an encoding versus a password hash, password recovery) and PE header analysis to record a Windows executable's entry-point address in PE Explorer.</li>
+          <li>Metasploit payload and reverse-shell lab in an isolated Windows 10 VM, observed with network and endpoint monitoring, with defensive recommendations.</li>
+          <li>Wi-Fi security assessment of a network I own: handshakes, password strength and remediation.</li>
+          <li>Advanced penetration test with a professional report: scope, methodology, evidence, risk ratings and remediation plan.</li>
+        </ul>
+        <!-- EDIT: change the last bullet to name the advanced option you completed. -->
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="label">Projects</div>
+    <div>
+      <div class="entry">
+        <div class="entry-head"><h2>CID Malware Intelligence Tool</h2><span class="meta">Python · Tkinter · github.com/HoodyK5</span></div>
+        <ul>
+          <li>SOC-style desktop app for malware analysis, grown from v3.1 through v3.2 to v4.</li>
+          <li>Integrates VirusTotal, Criminal IP, URLScan.io and Hybrid Analysis.</li>
+          <li>Modules: IOC extraction, YARA scanning, APK analysis, passive OSINT, SQLite hash cache, file quarantine, network monitoring, real-time alerts, PDF and CSV export.</li>
+          <li>API keys load from an environment file, so no secrets are stored in the repository.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-head"><h2>Wazuh SOC Home Lab</h2><span class="meta">Wazuh · Docker · VirtualBox</span></div>
+        <ul>
+          <li>Wazuh SIEM in Docker on Windows 11 monitoring an Ubuntu Server agent, with a Kali Linux VM as the attacker.</li>
+          <li>Configured File Integrity Monitoring, VirusTotal integration for malware verdicts and Active Response scripts for automated threat removal.</li>
+          <li>Mapped detections to MITRE ATT&amp;CK and wrote implementation and interview-prep reference guides.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="label">Certifications</div>
+    <ul class="certs">
+      <li><b>Certified LLM Security Expert (CLLMSE)</b><span class="d">Sep 2026</span><span class="i">Red Team Leaders · exam passed</span></li>
+      <li><b>Introduction to AI Security</b><span class="d">Oct 2026</span><span class="i">AISEC University · 2 training hours</span></li>
+      <li><b>Introduction to Cybersecurity</b><span class="d">Oct 2026</span><span class="i">Cisco Networking Academy · certificate and student-level credential</span></li>
+      <li><b>Networking Devices and Initial Configuration</b><span class="d">Oct 2026</span><span class="i">Cisco Networking Academy</span></li>
+      <li><b>Cloud Attack Paths</b><span class="d">Sep 2026</span><span class="i">Redspector · workshop, certificate of participation</span></li>
+      <li><b>The Haunted Network CTF</b><span class="d">Oct 2025</span><span class="i">Techbyheart · certificate of achievement</span></li>
+    </ul>
+  </section>
+
+  <section class="row">
+    <div class="label">Skills</div>
+    <ul class="skills">
+      <li><b>Detection:</b> Wazuh, Splunk, MITRE ATT&amp;CK, File Integrity Monitoring, Active Response</li>
+      <li><b>Offensive:</b> Kali Linux, Metasploit, Burp Suite, Nmap, directory enumeration, reverse-shell labs</li>
+      <li><b>Analysis:</b> Wireshark, PE Explorer, VeraCrypt, YARA, IOC extraction</li>
+      <li><b>Threat intelligence:</b> VirusTotal, URLScan.io, Hybrid Analysis, Criminal IP</li>
+      <li><b>AI and cloud security:</b> LLM security, AI security, cloud attack paths</li>
+      <li><b>Build and lab:</b> Python, Tkinter, SQLite, Git, Docker, VirtualBox, Ubuntu Server, Windows 11, TryHackMe</li>
+      <li><b>Reporting:</b> technical report writing, risk rating, remediation planning</li>
+    </ul>
+  </section>
+  <!-- EDUCATION: add a section here. Copy a whole <section class="row"> block and change the label to Education. -->
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById("themeBtn");
+  function isDark() {
+    var t = root.getAttribute("data-theme");
+    if (t) return t === "dark";
+    return !(window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches);
+  }
+  function label() { btn.textContent = isDark() ? "light mode" : "dark mode"; }
+  try { var saved = localStorage.getItem("tk-theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+  label();
+  btn.addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("tk-theme", next); } catch (e) {}
+    label();
+  });
+})();
+</script>
+</body>
+</html>
